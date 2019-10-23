@@ -19,9 +19,13 @@ namespace Clearent_CsharpProject.test
         person.GetWalletByName("Wallet 1").GetCardByName("visa 1").AdjustBalance(100);
         person.GetWalletByName("Wallet 1").GetCardByName("mastercard 1").AdjustBalance(100);
         person.GetWalletByName("Wallet 1").GetCardByName("discover 1").AdjustBalance(100);
+        
         var expected = new List<double> { 10, 5, 1};
+        // List of values match
         Assert.True(!expected.Except(InterestFunctions.GetInterest(person)).Any());
+        // Same number of values
         Assert.True((expected.Count == InterestFunctions.GetWalletInterest(person, "Wallet 1").Count()));
+        // Total is correct
         Assert.AreEqual(16, InterestFunctions.GetTotalInterest(person));
     }
     
@@ -38,14 +42,25 @@ namespace Clearent_CsharpProject.test
         person.AddWallet("Wallet 2");
         person.GetWalletByName("Wallet 2").AddCard(new Mastercard("mastercard 1"));
         person.GetWalletByName("Wallet 2").GetCardByName("mastercard 1").AdjustBalance(100);
+        
+        // Total is correct
         Assert.AreEqual(16, InterestFunctions.GetTotalInterest(person));
+        // Total for each wallet is correct
         Assert.AreEqual(11, InterestFunctions.GetWalletTotalInterest(person, "Wallet 1"));
         Assert.AreEqual(5, InterestFunctions.GetWalletTotalInterest(person, "Wallet 2"));
+        
+        // Wallet 1
         var expected = new List<double> { 10, 1};
+        // Values are correct
         Assert.True(!expected.Except(InterestFunctions.GetWalletInterest(person, "Wallet 1")).Any());
+        // Same number of values
         Assert.True((expected.Count == InterestFunctions.GetWalletInterest(person, "Wallet 1").Count()));
+        
+        // Wallet 2
         var expected2 = new List<double> { 5};
+        // Values are correct
         Assert.True(!expected2.Except(InterestFunctions.GetWalletInterest(person, "Wallet 2")).Any());
+        // Same number of values
         Assert.True(expected2.Count == InterestFunctions.GetWalletInterest(person, "Wallet 2").Count);
     }
     
@@ -66,13 +81,16 @@ namespace Clearent_CsharpProject.test
         first.GetWalletByName("Wallet 1").GetCardByName("mastercard 2").AdjustBalance(100);
         second.GetWalletByName("Wallet 1").GetCardByName("visa 1").AdjustBalance(100);
         second.GetWalletByName("Wallet 1").GetCardByName("mastercard 1").AdjustBalance(100);
+        
         Assert.AreEqual(10, InterestFunctions.GetTotalInterest(first));
         Assert.AreEqual(15, InterestFunctions.GetTotalInterest(second));
         Assert.AreEqual(10, InterestFunctions.GetWalletTotalInterest(first, "Wallet 1"));
         Assert.AreEqual(15, InterestFunctions.GetWalletTotalInterest(second, "Wallet 1"));
+        
         var expected = new List<double> { 5, 5};
         Assert.True(!expected.Except(InterestFunctions.GetInterest(first)).Any());
         Assert.True((expected.Count == InterestFunctions.GetInterest(first).Count));
+        
         var expected2 = new List<double> { 10, 5};
         Assert.True(!expected2.Except(InterestFunctions.GetInterest(second)).Any());
         Assert.True((expected2.Count == InterestFunctions.GetInterest(second).Count));
