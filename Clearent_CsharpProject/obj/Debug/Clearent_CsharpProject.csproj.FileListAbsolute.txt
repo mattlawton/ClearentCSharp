@@ -1,0 +1,10 @@
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\bin\Debug\Clearent_CsharpProject.exe
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\bin\Debug\Clearent_CsharpProject.pdb
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\bin\Debug\nunit.framework.dll
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\bin\Debug\nunit.framework.pdb
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\bin\Debug\nunit.framework.xml
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\obj\Debug\Clearent_CsharpProject.csprojAssemblyReference.cache
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\obj\Debug\Clearent_CsharpProject.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\obj\Debug\Clearent_CsharpProject.csproj.CopyComplete
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\obj\Debug\Clearent_CsharpProject.exe
+C:\Users\Administrator\RiderProjects\Clearent_CSharp\Clearent_CsharpProject\obj\Debug\Clearent_CsharpProject.pdb
