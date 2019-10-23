@@ -43,17 +43,17 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Card.cs" />
         <Compile Include="cards\CardInteresetRates.cs" />
         <Compile Include="cards\Discover.cs" />
         <Compile Include="cards\Mastercard.cs" />
         <Compile Include="cards\Visa.cs" />
-        <Compile Include="InterestFunctions.cs" />
-        <Compile Include="Person.cs" />
+        <Compile Include="classes\Card.cs" />
+        <Compile Include="classes\Person.cs" />
+        <Compile Include="classes\Wallet.cs" />
+        <Compile Include="functions\InterestFunctions.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="test\Test_InterestRateCalculation.cs" />
-        <Compile Include="Wallet.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
